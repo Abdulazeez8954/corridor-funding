@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>State & Product Controls | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <main class="admin-main" style="width: 100%;">
+            <h1>State & Product Availability</h1>
+            <p>Manually activate or deactivate products by state.</p>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Manual Override</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 15px; margin-top: 15px;">
+                    <select id="adm-state"><option value="TX">Texas</option><option value="CA">California</option></select>
+                    <select id="adm-prod"><option value="personal">Personal Loan</option><option value="mortgage">Mortgage</option></select>
+                    <select id="adm-status"><option value="true">Active</option><option value="false">Inactive</option></select>
+                    <button id="update-state-btn" class="btn btn-primary">Update Status</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="admin-states.js"></script>
+</body>
+</html>

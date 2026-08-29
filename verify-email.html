@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Verify Email | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+    <div class="auth-card" style="text-align: center;">
+        <h2>Check Your Email</h2>
+        <p>We've sent a verification link to your email address. Please verify your account to continue.</p>
+        <button id="resend-btn" class="btn btn-outline" style="margin-top: 20px;">Resend Email</button>
+        <div class="auth-footer"><a href="login.html">Back to Login</a></div>
+    </div>
+    <script type="module">
+        import { auth } from './firebase-init.js';
+        import { sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        document.getElementById('resend-btn').onclick = async () => {
+            if (auth.currentUser) {
+                await sendEmailVerification(auth.currentUser);
+                alert("Verification email resent!");
+            }
+        };
+    </script>
+</body>
+</html>

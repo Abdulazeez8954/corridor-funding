@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin Dashboard | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="brand">CF ADMIN PANEL</div>
+            <nav>
+                <a href="admin.html" class="admin-nav-item active">Overview</a>
+                <a href="admin-users.html" class="admin-nav-item">User Management</a>
+                <a href="admin-applications.html" class="admin-nav-item">Applications</a>
+                <a href="admin-states.html" class="admin-nav-item">States & Products</a>
+                <a href="admin-audit-logs.html" class="admin-nav-item">Audit Logs</a>
+                <a href="dashboard.html" class="admin-nav-item" style="margin-top: 40px;">Exit Admin</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <h1>System Overview</h1>
+            <div class="stat-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px;">
+                <div class="card"><h4>Total Users</h4><h2 id="total-users">--</h2></div>
+                <div class="card"><h4>Pending Apps</h4><h2 id="pending-apps">--</h2></div>
+                <div class="card"><h4>Active Loans</h4><h2 id="active-loans">--</h2></div>
+                <div class="card"><h4>System Health</h4><h2 style="color: var(--success);">OK</h2></div>
+            </div>
+            
+            <h3 style="margin-top: 40px;">Recent Activity</h3>
+            <table class="data-table" style="margin-top: 15px;">
+                <thead><tr><th>Action</th><th>User</th><th>Timestamp</th></tr></thead>
+                <tbody id="recent-activity"></tbody>
+            </table>
+        </main>
+    </div>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

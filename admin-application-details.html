@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Review Application | CF Admin</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <main class="admin-main">
+            <h1>Application Review</h1>
+            <div id="app-details" class="card" style="margin-top: 20px;">
+                <!-- Loaded via JS -->
+            </div>
+            
+            <div class="card" style="margin-top: 30px;">
+                <h3>Status Control</h3>
+                <div class="form-group" style="margin-top: 15px;">
+                    <select id="new-status">
+                        <option value="under_review">Under Review</option>
+                        <option value="information_required">Information Required</option>
+                        <option value="approved">Approve</option>
+                        <option value="declined">Decline</option>
+                    </select>
+                </div>
+                <button id="update-status-btn" class="btn btn-primary">Update Status</button>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="admin-application-details.js"></script>
+</body>
+</html>

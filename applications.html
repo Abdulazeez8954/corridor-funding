@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>My Applications | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Navigation is implied as consistent with Group 4 -->
+        <main class="main-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h1>My Applications</h1>
+                <a href="application.html" class="btn btn-primary">+ New Application</a>
+            </div>
+
+            <div class="card">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--medium-gray);">
+                            <th style="padding: 15px;">App #</th>
+                            <th style="padding: 15px;">Product</th>
+                            <th style="padding: 15px;">Amount</th>
+                            <th style="padding: 15px;">Status</th>
+                            <th style="padding: 15px;">Submitted</th>
+                            <th style="padding: 15px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applications-list">
+                        <!-- Populated by applications.js -->
+                    </tbody>
+                </table>
+                <div id="no-apps-message" style="display:none; padding: 40px; text-align: center; color: var(--text-light);">
+                    You haven't started any applications yet.
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="applications.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* Corridor Funding - Chat Styles */
+.chat-window {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f1f5f9;
+}
+.msg {
+    margin-bottom: 15px;
+    max-width: 80%;
+    padding: 12px;
+    border-radius: 12px;
+}
+.msg.sent {
+    background: var(--primary-navy);
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+.msg.received {
+    background: white;
+    color: var(--text-dark);
+}
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--medium-gray);
+}
+.chat-input-area input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    margin-right: 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Transactions | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="main-content">
+            <h1>Transaction History</h1>
+            <div class="card">
+                <table id="trans-table" style="width: 100%; text-align: left;">
+                    <thead><tr style="border-bottom: 2px solid var(--medium-gray);">
+                        <th>Date</th><th>Description</th><th>Amount</th><th>Status</th>
+                    </tr></thead>
+                    <tbody id="trans-list"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="transactions.js"></script>
+</body>
+</html>

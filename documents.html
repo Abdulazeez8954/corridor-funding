@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Documents | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="main-content">
+            <h1>Document Center</h1>
+            <p>Upload the requested documents to complete your application.</p>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Upload New Document</h3>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Document Type</label>
+                    <select id="doc-type">
+                        <option value="id_proof">Government ID / Passport</option>
+                        <option value="income_proof">Proof of Income (Paystubs/W2)</option>
+                        <option value="bank_statement">Bank Statements (3 Months)</option>
+                        <option value="tax_return">Tax Returns</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="file" id="doc-file" accept="image/*">
+                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 5px;">Images only (JPG/PNG). Max 1MB.</p>
+                </div>
+                <button id="upload-btn" class="btn btn-primary">Upload & Secure</button>
+            </div>
+
+            <div class="card" style="margin-top: 30px;">
+                <h3>My Documents</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                    <thead><tr style="text-align: left; border-bottom: 1px solid var(--medium-gray);">
+                        <th style="padding: 10px;">Name</th><th style="padding: 10px;">Status</th><th style="padding: 10px;">Date</th>
+                    </tr></thead>
+                    <tbody id="doc-list"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="documents.js"></script>
+</body>
+</html>

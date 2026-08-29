@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Apply Now | Corridor Funding</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="dashboard.css">
+    <style>
+        .step { display: none; }
+        .step.active { display: block; }
+        .progress-bar { height: 8px; background: var(--medium-gray); border-radius: 4px; margin-bottom: 30px; }
+        .progress-fill { height: 100%; background: var(--accent-teal); border-radius: 4px; transition: width 0.3s ease; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="main-content">
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <div class="progress-bar"><div class="progress-fill" id="progress" style="width: 20%;"></div></div>
+                
+                <form id="loan-app-form">
+                    <!-- Step 1: Product Selection -->
+                    <div class="step active" id="step-1">
+                        <h2>Select Financing</h2>
+                        <div class="form-group"><label>Product Type</label>
+                            <select id="productId" required>
+                                <option value="personal">Personal Loan</option>
+                                <option value="mortgage">Mortgage</option>
+                                <option value="business">Business Loan</option>
+                                <option value="debt">Debt Consolidation</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Requested Amount ($)</label><input type="number" id="requestedAmount" placeholder="5,000" required></div>
+                        <button type="button" class="btn btn-primary next-step">Continue</button>
+                    </div>
+
+                    <!-- Step 2: Personal Details -->
+                    <div class="step" id="step-2">
+                        <h2>Personal Details</h2>
+                        <div class="form-group"><label>Employment Status</label>
+                            <select id="employmentStatus"><option>Employed</option><option>Self-Employed</option><option>Retired</option></select>
+                        </div>
+                        <div class="form-group"><label>Annual Gross Income ($)</label><input type="number" id="annualIncome" required></div>
+                        <button type="button" class="btn btn-outline prev-step">Back</button>
+                        <button type="button" class="btn btn-primary next-step">Continue</button>
+                    </div>
+
+                    <!-- Step 3: State Availability Check & Review -->
+                    <div class="step" id="step-3">
+                        <h2>Review & Availability</h2>
+                        <div id="availability-status" style="margin-bottom: 20px; padding: 15px; border-radius: 4px;"></div>
+                        <div id="review-details" style="background: var(--light-gray); padding: 20px; border-radius: 4px; margin-bottom: 20px;"></div>
+                        
+                        <div class="form-group">
+                            <label><input type="checkbox" id="consent" required> I agree to the <a href="terms.html" target="_blank">Terms</a> and <a href="disclosures.html" target="_blank">Credit Disclosures</a>.</label>
+                        </div>
+                        
+                        <button type="button" class="btn btn-outline prev-step">Back</button>
+                        <button type="submit" class="btn btn-primary" id="submit-app-btn" disabled>Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="application-form.js"></script>
+</body>
+</html>
